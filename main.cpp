@@ -17,15 +17,8 @@ int main()
 	std::string rtm_detnano_onnx_path = "";
 	std::string rtm_pose_onnx_path = "";
 
-#ifdef _DEBUG
-	//rtm_detnano_onnx_path = "./models/rtmdet_nano.onnx";
-	rtm_detnano_onnx_path = "./models/rtmdet_m_person.onnx";
-	//rtm_pose_onnx_path = "./models/rtmpose-m-mpii.onnx";
-	rtm_pose_onnx_path = "./models/rtmpose-m-mpii-fp16.onnx";
-#else
-	rtm_detnano_onnx_path = "./resource/model/rtmpose-cpu/rtmpose-ort/rtmdet-nano/end2end.onnx";
-	rtm_pose_onnx_path = "./resource/model/rtmpose-cpu/rtmpose-ort/rtmpose-m/end2end.onnx";
-#endif
+	rtm_detnano_onnx_path = "./models/rtmdet_nano.onnx";
+	rtm_pose_onnx_path = "./models/rtmpose-m-mpii.onnx";
 
 	std::string img_path = "./images/z.jpg";
 	// 加载图像
